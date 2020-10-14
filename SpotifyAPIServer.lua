@@ -138,9 +138,7 @@ function APIServer:Resume()
             }
         )
 
-        if Res.code == 204 then
-            print("Yes")
-        else
+        if not Res.code == 204 then
             p(Res)
             p(Body)
         end
