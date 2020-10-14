@@ -89,6 +89,8 @@ function APIServer:GetInfo(raw)
             else
                 return json.parse(Body)
             end
+        elseif Res.code == 204 then
+            print("No track playing")
         else
             print("oof")
             p(Res)
